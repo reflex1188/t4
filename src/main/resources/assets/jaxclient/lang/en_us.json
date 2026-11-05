@@ -1,0 +1,9 @@
+{
+  "key.categories.jaxclient": "JaxClient",
+  "key.jaxclient.menu": "Open JaxClient Menu",
+  "key.jaxclient.fullbright": "Toggle Fullbright",
+  "key.jaxclient.autosprint": "Toggle AutoSprint",
+  "key.jaxclient.zoom": "Hold to Zoom",
+  "key.jaxclient.flight": "Toggle Flight",
+  "key.jaxclient.playeresp": "Toggle Player ESP"
+}

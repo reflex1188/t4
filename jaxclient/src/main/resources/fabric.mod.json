@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "jaxclient",
+  "version": "${version}",
+  "name": "JaxClient",
+  "description": "Dark, minimal client UI with Fullbright, AutoSprint and a HUD.",
+  "authors": ["Jax"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.jax.jaxclient.JaxClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
