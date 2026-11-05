@@ -1,0 +1,37 @@
+name: Build JaxClient
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: gradle
+          cache-dependency-path: jaxclient/*.gradle*
+
+      - name: Build JAR
+        working-directory: ./jaxclient
+        run: |
+          chmod +x gradlew
+          ./gradlew clean build --no-daemon
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: JaxClient-JAR
+          path: jaxclient/build/libs/*.jar
+          if-no-files-found: error
